@@ -1,0 +1,27 @@
+{
+  "name": "时光轴 - 人生记录笔记",
+  "short_name": "时光轴",
+  "description": "一款温暖的个人人生记录应用，帮助你记录和回顾人生中的重要时刻",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230f172a' width='512' height='512' rx='64'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='300'>✨</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230f172a' width='192' height='192' rx='24'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='100'>✨</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "productivity"],
+  "lang": "zh-CN",
+  "dir": "ltr"
+}

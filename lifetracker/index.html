@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#f59e0b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="时光轴" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%230f172a' width='180' height='180' rx='40'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='100'%3E✨%3C/text%3E%3C/svg%3E" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+    
+    <title>时光轴 - 人生记录笔记</title>
+    <meta name="description" content="一款温暖的个人人生记录应用，帮助你记录和回顾人生中的重要时刻" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Inline Critical CSS for Fast First Paint -->
+    <style>
+      body { margin: 0; background: #0f172a; }
+      #root { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+      .loading { color: #f59e0b; font-family: system-ui, sans-serif; font-size: 1.5rem; }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CEqxInDD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-GEHKBaH3.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading">✨ 时光轴</div>
+    </div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js')
+            .then((registration) => {
+              console.log('SW registered:', registration.scope);
+              
+              setInterval(() => {
+                registration.update();
+              }, 60 * 60 * 1000);
+            })
+            .catch((error) => {
+              console.error('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
