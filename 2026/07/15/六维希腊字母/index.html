@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>六维希腊字母 | 基础能力 × 生产力乘数</title>
+  <meta name="description" content=".six-dim-vis .card { max-width: 100%; background: white; border-radius: 36px; box-shadow: 0 25px 50px rgba(0,20,50,0.12); padding: 22px 24px 26px; }         .six-dim-vis h1 { font-weight: 600;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="六维希腊字母">
+<meta property="og:url" content="http://example.com/2026/07/15/%E5%85%AD%E7%BB%B4%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/index.html">
+<meta property="og:site_name" content="基础能力 × 生产力乘数">
+<meta property="og:description" content=".six-dim-vis .card { max-width: 100%; background: white; border-radius: 36px; box-shadow: 0 25px 50px rgba(0,20,50,0.12); padding: 22px 24px 26px; }         .six-dim-vis h1 { font-weight: 600;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-15T12:39:34.000Z">
+<meta property="article:modified_time" content="2026-07-15T13:37:52.210Z">
+<meta property="article:author" content="Zender">
+<meta name="twitter:card" content="summary">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/giscus.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/math.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('warmpaper-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">基础能力 × 生产力乘数</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        
+        
+          <a class="nav-link" href="/">首页</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E9%97%AE%E9%A2%98%E6%97%A5%E5%BF%97/">问题日志</a>
+        
+      
+        
+        
+          <div class="nav-dropdown">
+            <a class="nav-link" href="/categories/Idea%E5%AD%B5%E5%8C%96%E5%99%A8/">Idea孵化器</a>
+            <ul class="sub-menu">
+              
+            </ul>
+          </div>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7/">生产力工具</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/%E5%85%B3%E4%BA%8E/">关于</a>
+        
+      
+      <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题" data-theme-state="light">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">六维希腊字母</h1>
+    <div class="post-meta">
+      <time datetime="2026-07-15T12:39:34.000Z">2026-07-15</time>
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper wide">
+    <div class="post-content">
+      
+<div class="six-dim-vis">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<style>
+    .six-dim-vis .card { max-width: 100%; background: white; border-radius: 36px; box-shadow: 0 25px 50px rgba(0,20,50,0.12); padding: 22px 24px 26px; }
+        .six-dim-vis h1 { font-weight: 600; font-size: 1.7rem; color: #0b1e3a; margin: 0 0 2px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .subhead { color: #2e4b70; font-size: 0.9rem; margin-bottom: 18px; border-left: 4px solid #2a7de1; padding-left: 16px; background: #f0f5ff; border-radius: 0 12px 12px 0; line-height: 1.6; }
+        .subhead strong { background: #dce6f5; padding: 2px 12px; border-radius: 20px; font-weight: 600; color: #0b2b5c; }
+        .grid-main { display: grid; grid-template-columns: 320px 1fr; gap: 22px; }
+        @media (max-width: 1024px) { .grid-main { grid-template-columns: 1fr; gap: 18px; } }
+
+        /* 控制面板 */
+        .control-panel { background: #f9faff; border-radius: 24px; padding: 18px 16px 16px; border: 1px solid #e6edf6; }
+        .control-panel h3 { font-weight: 600; font-size: 0.95rem; color: #1d3a66; margin: 0 0 14px 0; display: flex; align-items: center; gap: 6px; }
+        .param-group { margin-bottom: 14px; }
+        .param-group label { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 500; color: #1f3a5e; margin-bottom: 2px; }
+        .param-group label span:last-child { background: #e2eaf6; padding: 0 10px; border-radius: 20px; font-weight: 600; color: #0a2647; font-size: 0.75rem; }
+        .six-dim-vis input[type=range] { width: 100%; margin: 3px 0; -webkit-appearance: none; background: transparent; }
+        .six-dim-vis input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 5px; background: #d0dcee; border-radius: 10px; }
+        .six-dim-vis input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 17px; height: 17px; background: #1f6feb; border-radius: 50%; margin-top: -6px; cursor: pointer; border: 2px solid white; box-shadow: 0 2px 6px rgba(25,85,200,0.25); }
+        .six-dim-vis input[type=range]::-moz-range-track { height: 5px; background: #d0dcee; border-radius: 10px; }
+        .six-dim-vis input[type=range]::-moz-range-thumb { width: 17px; height: 17px; background: #1f6feb; border-radius: 50%; border: 2px solid white; cursor: pointer; }
+
+        .iv-highlight { background: #eef4fc; border-radius: 16px; padding: 8px 12px; margin: 10px 0 8px; border-left: 4px solid #ff8c5a; }
+        .iv-highlight .iv-label { font-size: 0.65rem; color: #3f5f85; text-transform: uppercase; letter-spacing: 0.4px; }
+
+        .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 8px 0 4px; }
+        .price-box { background: #0b1e3a; border-radius: 14px; padding: 8px 12px; color: white; display: flex; justify-content: space-between; align-items: center; }
+        .price-box .label { font-weight: 300; font-size: 0.7rem; opacity: 0.7; }
+        .price-box .value { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #b3d9ff, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .price-box.put-box { background: #1d3152; }
+
+        .greeks-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin-top: 8px; }
+        .greek-item { background: white; border-radius: 10px; padding: 4px 6px 4px 8px; border: 1px solid #e0e9f5; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; }
+        .greek-item .sym { font-weight: 600; color: #1d3a66; }
+        .greek-item .val { font-weight: 600; color: #0b2b5c; background: #eef4fc; padding: 0 6px; border-radius: 30px; font-size: 0.65rem; }
+        .greek-item.highlight { border-color: #ff8c5a; background: #fff6ef; }
+
+        .chart-area { background: #ffffff; border-radius: 24px; border: 1px solid #e9eff6; padding: 4px 4px 0 4px; }
+        .chart-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 4px; }
+        @media (max-width: 900px) { .chart-row { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .chart-row { grid-template-columns: 1fr; } }
+        .chart-box { position: relative; height: 150px; }
+        .chart-box.tall { height: 200px; }
+        .chart-box canvas { width: 100% !important; height: 100% !important; }
+        .chart-label { font-size: 0.6rem; color: #4a6a8e; text-align: center; padding: 1px 0 0 0; font-weight: 500; letter-spacing: 0.2px; }
+        .legend-inline { display: flex; gap: 14px; justify-content: center; font-size: 0.65rem; padding: 1px 0 3px 0; flex-wrap: wrap; }
+        .legend-inline span::before { content: "●"; margin-right: 4px; font-size: 0.7rem; }
+        .legend-inline .call::before { color: #1f6feb; }
+        .legend-inline .put::before { color: #e6644a; }
+
+        .footnote { margin-top: 12px; border-top: 1px solid #e3ebf6; padding-top: 12px; font-size: 0.7rem; color: #4b6a8f; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+        .footnote .bs-formula { background: #ecf2fa; padding: 2px 12px; border-radius: 40px; font-family: 'Courier New', monospace; font-size: 0.65rem; }
+        .footnote .highlight { color: #c45a2c; font-weight: 500; }
+        .six-dim-vis .badge { background: #2a7de1; color: white; padding: 0 10px; border-radius: 40px; font-size: 0.6rem; font-weight: 600; }
+    </style>
+
+<div class="card">
+    <div>
+        <h1>🔬 六维希腊字母 · Δ Γ ν Vanna Volga Θ <span class="badge">全维度风险</span></h1>
+        <div class="subhead">
+            <strong>Vanna = ∂Δ/∂σ</strong> · <strong>Volga = ∂Vega/∂σ</strong> · 拖动滑块观察 <strong>6 个希腊字母</strong> 联动响应
+        </div>
+    </div>
+
+    <div class="grid-main">
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <h3>⚙️ 参数 & 风险仪表盘</h3>
+
+            <div class="param-group">
+                <label><span>标的资产 S₀</span><span id="sVal">100</span></label>
+                <input type="range" id="sSlider" min="20" max="200" value="100" step="0.5">
+            </div>
+            <div class="param-group">
+                <label><span>行权价 K</span><span id="kVal">100</span></label>
+                <input type="range" id="kSlider" min="30" max="180" value="100" step="0.5">
+            </div>
+            <div class="param-group">
+                <label><span>到期时间 T (年)</span><span id="tVal">1.0</span></label>
+                <input type="range" id="tSlider" min="0.1" max="3.0" value="1.0" step="0.05">
+            </div>
+
+            <div class="iv-highlight">
+                <div class="iv-label">📌 波动率曲面动态 (驱动 Vanna & Volga)</div>
+                <div class="param-group" style="margin-bottom: 4px;">
+                    <label><span>ATM 隐含波动率</span><span id="atmIvVal">25.0%</span></label>
+                    <input type="range" id="atmIvSlider" min="5" max="80" value="25" step="0.5">
+                </div>
+                <div class="param-group" style="margin-bottom: 4px;">
+                    <label><span>倾斜斜率 (Skew)</span><span id="skewVal">0.00</span></label>
+                    <input type="range" id="skewSlider" min="-50" max="50" value="0" step="0.5">
+                </div>
+                <div class="param-group" style="margin-bottom: 4px;">
+                    <label><span>波动率曲率 (Volga 驱动)</span><span id="curvatureVal">0.00</span></label>
+                    <input type="range" id="curvatureSlider" min="-30" max="30" value="0" step="0.5">
+                </div>
+                <div class="param-group" style="margin-bottom: 2px;">
+                    <label><span>杠杆效应 (Vanna 驱动)</span><span id="leverageVal">0.00</span></label>
+                    <input type="range" id="leverageSlider" min="-30" max="30" value="0" step="0.5">
+                </div>
+            </div>
+
+            <div class="param-group">
+                <label><span>无风险利率 r</span><span id="rVal">3.0%</span></label>
+                <input type="range" id="rSlider" min="0" max="15" value="3" step="0.1">
+            </div>
+
+            <div class="price-grid">
+                <div class="price-box"><span class="label">Call</span><span class="value" id="callPriceDisplay">—</span></div>
+                <div class="price-box put-box"><span class="label">Put</span><span class="value" id="putPriceDisplay">—</span></div>
+            </div>
+
+            <div class="greeks-grid">
+                <div class="greek-item"><span class="sym">Δ</span><span class="val" id="deltaVal">—</span></div>
+                <div class="greek-item"><span class="sym">Γ</span><span class="val" id="gammaVal">—</span></div>
+                <div class="greek-item"><span class="sym">Vega</span><span class="val" id="vegaVal">—</span></div>
+                <div class="greek-item highlight"><span class="sym">Vanna</span><span class="val" id="vannaVal">—</span></div>
+                <div class="greek-item highlight"><span class="sym">Volga</span><span class="val" id="volgaVal">—</span></div>
+                <div class="greek-item"><span class="sym">Θ (日)</span><span class="val" id="thetaVal">—</span></div>
+            </div>
+            <div style="margin-top:4px; font-size:0.6rem; color:#46658a; text-align:center; opacity:0.7;">
+                基于当前 S₀ · 全维度风险实时监控
+            </div>
+        </div>
+
+        <!-- 图表区域：6 个子图 -->
+        <div class="chart-area">
+            <!-- 主图：期权价格 -->
+            <div class="chart-box tall">
+                <canvas id="mainChart"></canvas>
+            </div>
+            <div class="legend-inline">
+                <span class="call">Call</span>
+                <span class="put">Put</span>
+                <span style="opacity:0.4;">| 虚线: S₀ / K</span>
+            </div>
+
+            <!-- 6 个希腊字母子图：3行 × 2列 -->
+            <div class="chart-row">
+                <div class="chart-box"><canvas id="deltaChart"></canvas><div class="chart-label">Delta (Δ) · 方向</div></div>
+                <div class="chart-box"><canvas id="gammaChart"></canvas><div class="chart-label">Gamma (Γ) · 凸性</div></div>
+                <div class="chart-box"><canvas id="vegaChart"></canvas><div class="chart-label">Vega (ν) · 波动率</div></div>
+            </div>
+            <div class="chart-row">
+                <div class="chart-box"><canvas id="thetaChart"></canvas><div class="chart-label">Theta (Θ) · 时间</div></div>
+                <div class="chart-box"><canvas id="vannaChart"></canvas><div class="chart-label">Vanna · ∂Δ/∂σ</div></div>
+                <div class="chart-box"><canvas id="volgaChart"></canvas><div class="chart-label">Volga · ∂Vega/∂σ</div></div>
+            </div>
+            <div style="font-size:0.55rem; color:#617e9e; text-align:right; padding-right:6px; margin-top:-2px;">
+                曲率 &amp; 杠杆效应 → Vanna/Volga 联动 · 六维风险全景
+            </div>
+        </div>
+    </div>
+
+    <div class="footnote">
+        <span class="bs-formula">C = S₀·N(d₁) – K·e⁻ʳᵀ·N(d₂)</span>
+        <span class="highlight">💡 六维希腊字母 = 方向 + 凸性 + 波动率 + 时间 + 二阶风险</span>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // DOM 元素
+        const sSlider = document.getElementById('sSlider');
+        const kSlider = document.getElementById('kSlider');
+        const tSlider = document.getElementById('tSlider');
+        const atmIvSlider = document.getElementById('atmIvSlider');
+        const skewSlider = document.getElementById('skewSlider');
+        const curvatureSlider = document.getElementById('curvatureSlider');
+        const leverageSlider = document.getElementById('leverageSlider');
+        const rSlider = document.getElementById('rSlider');
+
+        const sVal = document.getElementById('sVal');
+        const kVal = document.getElementById('kVal');
+        const tVal = document.getElementById('tVal');
+        const atmIvVal = document.getElementById('atmIvVal');
+        const skewVal = document.getElementById('skewVal');
+        const curvatureVal = document.getElementById('curvatureVal');
+        const leverageVal = document.getElementById('leverageVal');
+        const rVal = document.getElementById('rVal');
+
+        const callPriceDisplay = document.getElementById('callPriceDisplay');
+        const putPriceDisplay = document.getElementById('putPriceDisplay');
+        const deltaVal = document.getElementById('deltaVal');
+        const gammaVal = document.getElementById('gammaVal');
+        const vegaVal = document.getElementById('vegaVal');
+        const vannaVal = document.getElementById('vannaVal');
+        const volgaVal = document.getElementById('volgaVal');
+        const thetaVal = document.getElementById('thetaVal');
+
+        let mainChart, deltaChart, gammaChart, vegaChart, thetaChart, vannaChart, volgaChart;
+
+        // ---------- 数学辅助 ----------
+        function normCDF(x) {
+            const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741;
+            const a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+            const sign = x < 0 ? -1 : 1;
+            const absX = Math.abs(x);
+            const t = 1 / (1 + p * absX);
+            const y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-absX * absX / 2);
+            return 0.5 * (1 + sign * (y - 0.5) * 2);
+        }
+        function normPDF(x) {
+            return (1 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * x * x);
+        }
+
+        // ---------- 带曲率和杠杆效应的局部 IV ----------
+        function getLocalIV(S, S0, atmIV, skew, curvature, leverage) {
+            const moneyness = (S - S0) / S0;
+            let iv = atmIV + skew * moneyness + curvature * moneyness * moneyness;
+            if (S < S0) {
+                iv += leverage * (S0 - S) / S0;
+            } else {
+                iv += leverage * 0.3 * (S - S0) / S0;
+            }
+            return Math.max(0.001, iv);
+        }
+
+        // ---------- BS 定价 + 全部希腊字母 ----------
+        function blackScholesFull(S, K, T, sigma, r) {
+            if (T <= 0 || sigma <= 0) {
+                const call = Math.max(0, S - K);
+                const put = Math.max(0, K - S);
+                return { call, put, delta: S > K ? 1 : (S < K ? 0 : 0.5), gamma: 0, vega: 0, vanna: 0, volga: 0, theta: 0 };
+            }
+            const d1 = (Math.log(S / K) + (r + 0.5 * sigma * sigma) * T) / (sigma * Math.sqrt(T));
+            const d2 = d1 - sigma * Math.sqrt(T);
+            const Nd1 = normCDF(d1), Nd2 = normCDF(d2);
+            const Nminusd1 = normCDF(-d1), Nminusd2 = normCDF(-d2);
+            const pdf = normPDF(d1);
+
+            const call = S * Nd1 - K * Math.exp(-r * T) * Nd2;
+            const put = K * Math.exp(-r * T) * Nminusd2 - S * Nminusd1;
+            const delta = Nd1;
+            const gamma = pdf / (S * sigma * Math.sqrt(T));
+            const vega = S * Math.sqrt(T) * pdf;
+            const theta = -(S * pdf * sigma) / (2 * Math.sqrt(T)) - r * K * Math.exp(-r * T) * Nd2;
+            const vanna = -d2 * pdf;
+            const volga = d1 * d2 * pdf * S * Math.sqrt(T);
+
+            return { call, put, delta, gamma, vega, vanna, volga, theta };
+        }
+
+        // ---------- 更新全部 ----------
+        function updateAll() {
+            const S0 = parseFloat(sSlider.value);
+            const K = parseFloat(kSlider.value);
+            const T = parseFloat(tSlider.value);
+            const atmIV = parseFloat(atmIvSlider.value) / 100;
+            const skew = parseFloat(skewSlider.value) / 100;
+            const curvature = parseFloat(curvatureSlider.value) / 100;
+            const leverage = parseFloat(leverageSlider.value) / 100;
+            const r = parseFloat(rSlider.value) / 100;
+
+            // 更新显示
+            sVal.textContent = S0.toFixed(1);
+            kVal.textContent = K.toFixed(1);
+            tVal.textContent = T.toFixed(2);
+            atmIvVal.textContent = (atmIV * 100).toFixed(1) + '%';
+            skewVal.textContent = (skew * 100).toFixed(1) + '%';
+            curvatureVal.textContent = (curvature * 100).toFixed(1) + '%';
+            leverageVal.textContent = (leverage * 100).toFixed(1) + '%';
+            rVal.textContent = (r * 100).toFixed(1) + '%';
+
+            // 当前标的价格下的局部 IV
+            const currentIV = getLocalIV(S0, S0, atmIV, skew, curvature, leverage);
+            const result = blackScholesFull(S0, K, T, currentIV, r);
+            callPriceDisplay.textContent = Math.max(0, result.call).toFixed(3);
+            putPriceDisplay.textContent = Math.max(0, result.put).toFixed(3);
+            deltaVal.textContent = result.delta.toFixed(4);
+            gammaVal.textContent = result.gamma.toFixed(4);
+            vegaVal.textContent = (result.vega / 100).toFixed(4);
+            vannaVal.textContent = result.vanna.toFixed(4);
+            volgaVal.textContent = (result.volga / 100).toFixed(4);
+            thetaVal.textContent = (result.theta / 365).toFixed(4);
+
+            // ---- 绘图范围 ----
+            const minS = Math.max(1, S0 * 0.15);
+            const maxS = Math.max(S0 * 2.5, 30);
+            const steps = 90;
+            const stepSize = (maxS - minS) / steps;
+            const sValues = [];
+            const callVals = [], putVals = [];
+            const deltaVals = [], gammaVals = [], vegaVals = [], thetaVals = [];
+            const vannaVals = [], volgaVals = [];
+
+            for (let i = 0; i <= steps; i++) {
+                const s = minS + i * stepSize;
+                sValues.push(s);
+                const localIV = getLocalIV(s, S0, atmIV, skew, curvature, leverage);
+                const res = blackScholesFull(s, K, T, localIV, r);
+                callVals.push(Math.max(0, res.call));
+                putVals.push(Math.max(0, res.put));
+                deltaVals.push(res.delta);
+                gammaVals.push(res.gamma);
+                vegaVals.push(res.vega / 100);
+                thetaVals.push(res.theta / 365);
+                vannaVals.push(res.vanna);
+                volgaVals.push(res.volga / 100);
+            }
+
+            // ---- 主图：价格 ----
+            if (mainChart) {
+                mainChart.data.labels = sValues;
+                mainChart.data.datasets[0].data = callVals;
+                mainChart.data.datasets[1].data = putVals;
+                mainChart.update();
+            } else {
+                mainChart = new Chart(document.getElementById('mainChart'), {
+                    type: 'line',
+                    data: {
+                        labels: sValues,
+                        datasets: [
+                            { label: 'Call', data: callVals, borderColor: '#1f6feb', borderWidth: 2.5, pointRadius: 0, tension: 0.2, fill: false },
+                            { label: 'Put', data: putVals, borderColor: '#e6644a', borderWidth: 2.5, pointRadius: 0, tension: 0.2, fill: false }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(3) } } },
+                        scales: {
+                            x: { title: { display: true, text: 'S', color: '#3f5f85', font: { size: 9 } }, grid: { color: 'rgba(0,0,0,0.03)' }, ticks: { color: '#2b4a70', font: { size: 8 } } },
+                            y: { grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { font: { size: 7 } } }
+                        },
+                        interaction: { mode: 'nearest', intersect: false }
+                    }
+                });
+                // 标注插件
+                const markerPlugin = {
+                    id: 'bsMarker',
+                    afterDraw: function(chart) {
+                        const ctx = chart.ctx, xScale = chart.scales.x, yScale = chart.scales.y;
+                        if (!xScale || !yScale) return;
+                        const S0v = parseFloat(sSlider.value), Kv = parseFloat(kSlider.value);
+                        ctx.save(); ctx.setLineDash([4, 4]); ctx.lineWidth = 1.2;
+                        const drawLine = (val, color, label) => {
+                            const px = xScale.getPixelForValue(val);
+                            if (px >= 0 && px <= xScale.width) {
+                                ctx.beginPath(); ctx.moveTo(px, yScale.top); ctx.lineTo(px, yScale.bottom);
+                                ctx.strokeStyle = color; ctx.globalAlpha = 0.35; ctx.stroke();
+                                ctx.globalAlpha = 0.8; ctx.fillStyle = color; ctx.font = '8px sans-serif';
+                                ctx.fillText(label, px - 8, yScale.top - 3);
+                            }
+                        };
+                        drawLine(S0v, '#1f6feb', 'S₀');
+                        drawLine(Kv, '#e6644a', 'K');
+                        ctx.restore();
+                    }
+                };
+                mainChart.register(markerPlugin);
+            }
+
+            // ---- 6 个希腊字母子图 ----
+            const createOrUpdateChart = (chart, id, label, color, data, yLabel = '') => {
+                if (chart) {
+                    chart.data.labels = sValues;
+                    chart.data.datasets[0].data = data;
+                    chart.update();
+                    return chart;
+                } else {
+                    const newChart = new Chart(document.getElementById(id), {
+                        type: 'line',
+                        data: {
+                            labels: sValues,
+                            datasets: [{ label: label, data: data, borderColor: color, borderWidth: 2, pointRadius: 0, tension: 0.2, fill: false }]
+                        },
+                        options: {
+                            responsive: true, maintainAspectRatio: false,
+                            plugins: { legend: { display: false } },
+                            scales: {
+                                x: { display: false, grid: { display: false } },
+                                y: { grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { color: '#3f5f85', font: { size: 7 } } }
+                            }
+                        }
+                    });
+                    return newChart;
+                }
+            };
+
+            deltaChart = createOrUpdateChart(deltaChart, 'deltaChart', 'Delta', '#2a7de1', deltaVals);
+            gammaChart = createOrUpdateChart(gammaChart, 'gammaChart', 'Gamma', '#e68a2e', gammaVals);
+            vegaChart = createOrUpdateChart(vegaChart, 'vegaChart', 'Vega', '#2ea86b', vegaVals);
+            thetaChart = createOrUpdateChart(thetaChart, 'thetaChart', 'Theta', '#c45a7a', thetaVals);
+            vannaChart = createOrUpdateChart(vannaChart, 'vannaChart', 'Vanna', '#9b59b6', vannaVals);
+            volgaChart = createOrUpdateChart(volgaChart, 'volgaChart', 'Volga', '#e67e22', volgaVals);
+        }
+
+        // 绑定事件
+        [sSlider, kSlider, tSlider, atmIvSlider, skewSlider, curvatureSlider, leverageSlider, rSlider].forEach(sl => {
+            sl.addEventListener('input', updateAll);
+        });
+
+        updateAll();
+        window.addEventListener('resize', () => {
+            [mainChart, deltaChart, gammaChart, vegaChart, thetaChart, vannaChart, volgaChart].forEach(c => { if (c) c.resize(); });
+        });
+    })();
+</script>
+</div>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">Contents</h3>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">⚙️ 参数 &amp; 风险仪表盘</span></a></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  
+
+  
+    
+<div class="giscus"></div>
+<script>
+  (function () {
+    var THEME_LIGHT = 'light';
+    var THEME_DARK  = 'dark';
+
+    // The site's authoritative theme lives on <html data-theme>; when absent,
+    // fall back to the OS preference (mirrors source/js/main.js).
+    function computeTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr === 'dark') return THEME_DARK;
+      if (attr === 'light') return THEME_LIGHT;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME_DARK : THEME_LIGHT;
+    }
+
+    // Inject the loader with the correct theme already set, so giscus renders in
+    // the right theme on first paint instead of flashing then re-skinning.
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('data-repo', 'lzldemo/lzldemo.github.io');
+    s.setAttribute('data-repo-id', 'R_kgDOQnQQ4A');
+    s.setAttribute('data-category', 'General');
+    s.setAttribute('data-category-id', 'DIC_kwDOQnQQ4M4DBBxh');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'bottom');
+    s.setAttribute('data-lang', 'zh-CN');
+    s.setAttribute('data-loading', 'lazy');
+    s.setAttribute('data-theme', computeTheme());
+    document.querySelector('.giscus').appendChild(s);
+
+    // giscus is a cross-origin iframe, so it can't read the host CSS. Push the
+    // theme to it via postMessage whenever the site theme changes.
+    function sendTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) return;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: computeTheme() } } },
+        'https://giscus.app'
+      );
+    }
+
+    // The theme-toggle button flips <html data-theme>; watch it directly so we
+    // stay decoupled from source/js/main.js.
+    new MutationObserver(sendTheme).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+    // Also follow the OS preference when the user hasn't manually chosen a theme.
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sendTheme);
+  })();
+</script>
+
+  
+
+  <footer class="post-footer">
+    
+    <nav class="post-nav">
+      
+        <a class="prev" href="/2026/07/16/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bopencode%E4%BB%8A%E5%A4%A9%E5%B0%B1%E5%BC%80%E5%A7%8B5%E5%80%8D%E6%8F%90%E6%95%88/">&laquo; 10分钟上手 opencode：今天就开始 5x 提效</a>
+      
+      
+        <a class="next" href="/2026/07/12/Idea%E5%AD%B5%E5%8C%96%E5%99%A8-%E5%8D%A0%E4%BD%8D/">Idea孵化器-占位 &raquo;</a>
+      
+    </nav>
+  </footer>
+
+  
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      // Skip the TOC sidebar and nav so heading math copied into the TOC
+      // isn't typeset a second time.
+      ignoreHtmlClass: 'toc-sidebar|site-nav',
+      enableMenu: false
+    }
+  };
+</script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@4.1.2/tex-mml-chtml.js"
+        integrity="sha384-Nfw2UPOp2WaWfAjGXccSL8qKx4KWXN9NUonXtPcotBXKSqHMyNWrahYzDzIXhpTy"
+        crossorigin="anonymous"></script>
+
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 Zender</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>

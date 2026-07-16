@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>10分钟上手 opencode：今天就开始 5x 提效 | 基础能力 × 生产力乘数</title>
+  <meta name="description" content="一、你只差这 10 分钟如果你已经下载了 opencode，但面对命令行界面不知道该从哪开始 —— 你不是一个人。 这个问题很普遍：AI 编程工具的宣传片都展示各种炫酷操作，但新手开机后的第一公里往往没人管。“东西装好了，然后呢？” 这篇文章的目标很简单：花 10 分钟完成从零到跑通真东西的全过程。 10 分钟之后，你将拥有：  一个跑通的 opencode 环境 四个可以直接用的小工具 一套可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10分钟上手 opencode：今天就开始 5x 提效">
+<meta property="og:url" content="http://example.com/2026/07/16/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bopencode%E4%BB%8A%E5%A4%A9%E5%B0%B1%E5%BC%80%E5%A7%8B5%E5%80%8D%E6%8F%90%E6%95%88/index.html">
+<meta property="og:site_name" content="基础能力 × 生产力乘数">
+<meta property="og:description" content="一、你只差这 10 分钟如果你已经下载了 opencode，但面对命令行界面不知道该从哪开始 —— 你不是一个人。 这个问题很普遍：AI 编程工具的宣传片都展示各种炫酷操作，但新手开机后的第一公里往往没人管。“东西装好了，然后呢？” 这篇文章的目标很简单：花 10 分钟完成从零到跑通真东西的全过程。 10 分钟之后，你将拥有：  一个跑通的 opencode 环境 四个可以直接用的小工具 一套可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/opencode/cover.svg">
+<meta property="og:image" content="http://example.com/images/opencode/tui-hello.png">
+<meta property="og:image" content="http://example.com/images/opencode/tomato.png">
+<meta property="article:published_time" content="2026-07-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-07-16T14:39:25.285Z">
+<meta property="article:author" content="Zender">
+<meta property="article:tag" content="opencode">
+<meta property="article:tag" content="生产力乘数">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/opencode/cover.svg">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/giscus.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/math.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('warmpaper-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">基础能力 × 生产力乘数</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        
+        
+          <a class="nav-link" href="/">首页</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E9%97%AE%E9%A2%98%E6%97%A5%E5%BF%97/">问题日志</a>
+        
+      
+        
+        
+          <div class="nav-dropdown">
+            <a class="nav-link" href="/categories/Idea%E5%AD%B5%E5%8C%96%E5%99%A8/">Idea孵化器</a>
+            <ul class="sub-menu">
+              
+            </ul>
+          </div>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7/">生产力工具</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/%E5%85%B3%E4%BA%8E/">关于</a>
+        
+      
+      <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题" data-theme-state="light">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">10分钟上手 opencode：今天就开始 5x 提效</h1>
+    <div class="post-meta">
+      <time datetime="2026-07-15T16:00:00.000Z">2026-07-16</time>
+      
+        <span class="separator">&middot;</span>
+        
+          <a href="/categories/%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7/">生产力工具</a>
+        
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <p><img src="/images/opencode/cover.svg" alt="封面"></p>
+<h2 id="一、你只差这-10-分钟"><a href="#一、你只差这-10-分钟" class="headerlink" title="一、你只差这 10 分钟"></a>一、你只差这 10 分钟</h2><p>如果你已经下载了 opencode，但面对命令行界面不知道该从哪开始 —— 你不是一个人。</p>
+<p>这个问题很普遍：AI 编程工具的宣传片都展示各种炫酷操作，但新手开机后的第一公里往往没人管。<strong>“东西装好了，然后呢？”</strong></p>
+<p>这篇文章的目标很简单：<strong>花 10 分钟完成从零到跑通真东西的全过程。</strong></p>
+<p>10 分钟之后，你将拥有：</p>
+<ul>
+<li>一个跑通的 opencode 环境</li>
+<li>四个可以直接用的小工具</li>
+<li>一套可以复用的 “想法 → 代码” 工作流</li>
+</ul>
+<p>这是一笔 ROI 极高的时间投资。开始吧。</p>
+<h2 id="二、5-分钟：从-0-到能跑"><a href="#二、5-分钟：从-0-到能跑" class="headerlink" title="二、5 分钟：从 0 到能跑"></a>二、5 分钟：从 0 到能跑</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>Windows 用户，任选其一：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方案 A：winget（推荐，最省事）</span></span><br><span class="line">winget install OpenCode</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方案 B：scoop</span></span><br><span class="line">scoop bucket add opencode https://github.com/anomalyco/opencode</span><br><span class="line">scoop install opencode</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方案 C：直接下载 exe</span></span><br><span class="line"><span class="comment"># 去 https://github.com/anomalyco/opencode/releases 下载最新版</span></span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，在终端输入 <code>opencode</code>，看到 TUI 界面就成功了。</p>
+<h3 id="2-2-配置模型"><a href="#2-2-配置模型" class="headerlink" title="2.2 配置模型"></a>2.2 配置模型</h3><p>opencode 的核心哲学是 <strong>模型中立</strong>——你可以接任何模型。但新手最需要的是”开箱即用”。</p>
+<p>推荐路径：<strong>使用内置免费模型</strong></p>
+<p>opencode 自带免费模型（DeepSeek V4 Flash Free），无需任何 API Key，装完即用。启动后在界面中选择 <code>Zen</code> 提供商的 <code>DeepSeek V4 Flash Free</code> 即可。</p>
+<p>如果之后需要更强的能力，升级路径也很平滑：</p>
+<ul>
+<li><strong>OpenCode Go</strong>：$5&#x2F;首月，之后 $10&#x2F;月，接入 DeepSeek V4 Pro、Qwen3.7 Max 等开源强模型</li>
+<li><strong>BYOK</strong>：绑定你自己的 Claude &#x2F; GPT &#x2F; Gemini API Key</li>
+<li><strong>OpenCode Zen</strong>：$20 预付费，按量计费，零加成</li>
+</ul>
+<h3 id="2-3-验证：第一次对话"><a href="#2-3-验证：第一次对话" class="headerlink" title="2.3 验证：第一次对话"></a>2.3 验证：第一次对话</h3><p>进入 opencode 界面后，在输入框打一句话：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">帮我用 python 写一个计算斐波那契数列的函数，并打印前 20 项</span><br></pre></td></tr></table></figure>
+
+<p>几秒钟后，代码生成并写入文件。如果一切正常——<strong>恭喜，你已经在用 opencode 了。</strong></p>
+<p><img src="/images/opencode/tui-hello.png" alt="opencode TUI 界面截图"></p>
+<h2 id="三、5-分钟：四个-Demo，一个比一个实用"><a href="#三、5-分钟：四个-Demo，一个比一个实用" class="headerlink" title="三、5 分钟：四个 Demo，一个比一个实用"></a>三、5 分钟：四个 Demo，一个比一个实用</h2><p>理论够了，来真东西。以下四个小工具都是用 opencode 生成的，每个从提需求到跑通不超过 5 分钟。</p>
+<h3 id="Demo-1：批量图片压缩转-WebP"><a href="#Demo-1：批量图片压缩转-WebP" class="headerlink" title="Demo 1：批量图片压缩转 WebP"></a>Demo 1：批量图片压缩转 WebP</h3><p><strong>场景</strong>：写博客时导出一堆截图，每张好几 MB，要一张张打开 Photoshop 导出为 WebP。</p>
+<p>传统做法：打开 PS → 导出为 WebP → 调质量 → 保存 → 下一张。十几张图搞半小时。</p>
+<p>opencode 一次搞定：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">demos/opencode-article/img2webp/cli.mjs</span><br></pre></td></tr></table></figure>
+
+<p>使用方式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装依赖（只需一次）</span></span><br><span class="line"><span class="built_in">cd</span> demos/opencode-article/img2webp</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换当前目录所有图片为 WebP，质量 75</span></span><br><span class="line">node cli.mjs /path/to/images ./output 75</span><br></pre></td></tr></table></figure>
+
+<p>实测三张图从 12KB 压缩到 4KB，体积减少约 63%，肉眼几乎看不出区别。</p>
+<h3 id="Demo-2：Hexo-Front-matter-批量编辑器"><a href="#Demo-2：Hexo-Front-matter-批量编辑器" class="headerlink" title="Demo 2：Hexo Front-matter 批量编辑器"></a>Demo 2：Hexo Front-matter 批量编辑器</h3><p><strong>场景</strong>：写博客久了，突然想给所有文章统一加个 tag，或者改分类。每篇手动打开改 YAML？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有文章的 front-matter</span></span><br><span class="line">node demos/opencode-article/fm-edit/cli.mjs <span class="built_in">source</span>/_posts list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 给所有文章加一个 tag</span></span><br><span class="line">node demos/opencode-article/fm-edit/cli.mjs <span class="built_in">source</span>/_posts add tags 生产力工具</span><br><span class="line"></span><br><span class="line"><span class="comment"># 批量修改某个字段</span></span><br><span class="line">node demos/opencode-article/fm-edit/cli.mjs <span class="built_in">source</span>/_posts <span class="built_in">set</span> categories 生产力工具</span><br></pre></td></tr></table></figure>
+
+<p>这个工具本身就是 opencode 生成的，前后不到 3 分钟。而手动改我 15 篇文章的 front-matter 大概需要… 我根本没耐心做完。</p>
+<h3 id="Demo-3：截图-→-Markdown-一键引用"><a href="#Demo-3：截图-→-Markdown-一键引用" class="headerlink" title="Demo 3：截图 → Markdown 一键引用"></a>Demo 3：截图 → Markdown 一键引用</h3><p><strong>场景</strong>：写技术文章经常要贴截图。截图 → 保存到文件夹 → 重命名 → 输入 <code>![]()</code> → 填路径。每个截图重复 5 步。</p>
+<p>opencode 生成的脚本把这个流程简化成一步：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node demos/opencode-article/snap2md/cli.mjs screenshots</span><br><span class="line"><span class="comment"># 然后直接粘贴截图文件的路径</span></span><br><span class="line"><span class="comment"># 脚本自动复制到目标目录，并输出：</span></span><br><span class="line"><span class="comment">#   ✓ 已保存: screenshots/screenshot-20260716-001.png</span></span><br><span class="line"><span class="comment">#   ![](screenshots/screenshot-20260716-001.png)</span></span><br></pre></td></tr></table></figure>
+
+<p>粘贴一张，直接复制输出的 Markdown 引用，贴到文章里。写这篇文章时我自己就在用这个流程。</p>
+<h3 id="Demo-4：全功能番茄钟网页"><a href="#Demo-4：全功能番茄钟网页" class="headerlink" title="Demo 4：全功能番茄钟网页"></a>Demo 4：全功能番茄钟网页</h3><p><strong>场景</strong>：想要一个漂亮的番茄钟，没有广告，没有注册，开箱即用。<br><img src="/images/opencode/tomato.png" alt="番茄钟网页"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">demos/opencode-article/pomodoro/index.html</span><br></pre></td></tr></table></figure>
+
+<p>纯前端，零依赖，双击即可打开。功能齐全：</p>
+<ul>
+<li>专注&#x2F;休息模式切换</li>
+<li>进度条</li>
+<li>自定义时长</li>
+<li>本地存储统计</li>
+</ul>
+<p>用 opencode 生成这个番茄钟，前后对话了三四轮：第一轮生成基础版，第二轮加进度条和暂停功能，第三轮美化样式，第四轮加本地统计。<strong>整个过程大概 5 分钟。</strong></p>
+<p>对比传统的做法：打开 CodePen 或 VS Code → 写 HTML 结构 → 写 CSS 样式（调半天） → 写 JS 逻辑（处理各种边缘情况） → 调试。30 分钟起步，上不封顶。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><table>
+<thead>
+<tr>
+<th>Demo</th>
+<th>传统耗时</th>
+<th>opencode</th>
+<th>你省下的时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>批量图片压缩转 WebP</td>
+<td>~30 min</td>
+<td>~3 min</td>
+<td>27 min</td>
+</tr>
+<tr>
+<td>Hexo Front-matter 编辑器</td>
+<td>~20 min</td>
+<td>~3 min</td>
+<td>17 min</td>
+</tr>
+<tr>
+<td>截图 → Markdown 引用</td>
+<td>~45 min</td>
+<td>~5 min</td>
+<td>40 min</td>
+</tr>
+<tr>
+<td>番茄钟网页</td>
+<td>~30 min</td>
+<td>~5 min</td>
+<td>25 min</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>~125 min</strong></td>
+<td><strong>~16 min</strong></td>
+<td><strong>~109 min</strong></td>
+</tr>
+</tbody></table>
+<p>这篇文章的阅读时间大概 5-7 分钟。看完它，你就赚回了一个多小时。</p>
+<h2 id="四、为什么这笔投资回报率极高"><a href="#四、为什么这笔投资回报率极高" class="headerlink" title="四、为什么这笔投资回报率极高"></a>四、为什么这笔投资回报率极高</h2><p>很多人把 AI 编程工具当成”写代码加速器”——需求明确，让 AI 写快点。</p>
+<p>但 opencode 带来的真正转变，是 <strong>从”写代码”到”表达想法”的范式切换。</strong></p>
+<p>以前的工作流是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">想法 → 需求文档 → 架构设计 → 写代码 → 调试 → 测试 → 发布</span><br></pre></td></tr></table></figure>
+
+<p>opencode 的工作流是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">想法 → 对话 → 跑通 → 迭代</span><br></pre></td></tr></table></figure>
+
+<p>中间几层抽象全消失了。<strong>你想做什么，直接说，它先给出来，你再打磨。</strong></p>
+<p>这意味着什么？</p>
+<ul>
+<li>以前你会因为”写个工具要半小时”而放弃的想法，现在 5 分钟就能跑通原型</li>
+<li>以前你需要专门抽时间学习的”小技能”（正则、YAML 处理、脚本编写），现在直接让 opencode 搞定</li>
+<li>你的瓶颈从”编码能力”变成了”想法的清晰度”——而这恰恰是只能自己提升的部分</li>
+</ul>
+<p><strong>opencode 不会让你变成更牛逼的程序员，但它会让你变成一个更高效的问题解决者。</strong></p>
+<p>如果你想知道下一步怎么深入：</p>
+<ul>
+<li>试试 <strong>Plan 模式</strong>：让它先出方案你再决定怎么建</li>
+<li>试试 <strong>@explore 子代理</strong>：让它在陌生项目里做代码侦查</li>
+<li>试试自定义 <strong>Agent Skills</strong>：把你常用的工作流封装成可复用的技能</li>
+</ul>
+<h2 id="五、这篇文章本身就是最好的-Demo"><a href="#五、这篇文章本身就是最好的-Demo" class="headerlink" title="五、这篇文章本身就是最好的 Demo"></a>五、这篇文章本身就是最好的 Demo</h2><p>写到这里，我想告诉你一个事实：</p>
+<p><strong>你现在读的这篇文章，就是用 opencode 写出来的。</strong></p>
+<p>整个过程是这样的：</p>
+<ol>
+<li>我脑子里有一个想法：”我想写一篇关于 opencode 的文章，让新手能快速上手”</li>
+<li>我打开 opencode，用文字描述了这个想法</li>
+<li>opencode 帮我梳理了文章结构，我调整了几轮</li>
+<li>我提出”做个 Demo 展示威力”，opencode 生成了四个小工具</li>
+<li>我运行、测试、截图</li>
+<li>opencode 根据所有上下文生成了文章初稿</li>
+<li>我通读一遍，微调了语气和细节</li>
+<li>发布</li>
+</ol>
+<p>这是完整的自指闭环：</p>
+<ul>
+<li><strong>工具</strong> &#x3D; opencode</li>
+<li><strong>主题</strong> &#x3D; opencode 有多好用</li>
+<li><strong>生产过程</strong> &#x3D; 用 opencode 完成</li>
+<li><strong>Demo</strong> &#x3D; opencode 生成的四个工具</li>
+<li><strong>读者获益</strong> &#x3D; 看完立刻能用 opencode</li>
+</ul>
+<p>这个模式我称之为 <strong>dogfooding 的终极形态</strong>：你用产品的方式，就是产品要教会别人的方式。</p>
+<p><strong>你现在面对的不是一个工具，一个可以把”想法 → 实现”之间的摩擦降到接近于零的生产力乘数。</strong></p>
+<p>去打开终端，输入 <code>opencode</code>。10 分钟后，你会感谢这 10 分钟。</p>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">Contents</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%A0%E5%8F%AA%E5%B7%AE%E8%BF%99-10-%E5%88%86%E9%92%9F"><span class="toc-text">一、你只差这 10 分钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%815-%E5%88%86%E9%92%9F%EF%BC%9A%E4%BB%8E-0-%E5%88%B0%E8%83%BD%E8%B7%91"><span class="toc-text">二、5 分钟：从 0 到能跑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85"><span class="toc-text">2.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9E%8B"><span class="toc-text">2.2 配置模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%AA%8C%E8%AF%81%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AF%B9%E8%AF%9D"><span class="toc-text">2.3 验证：第一次对话</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%815-%E5%88%86%E9%92%9F%EF%BC%9A%E5%9B%9B%E4%B8%AA-Demo%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%AF%94%E4%B8%80%E4%B8%AA%E5%AE%9E%E7%94%A8"><span class="toc-text">三、5 分钟：四个 Demo，一个比一个实用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo-1%EF%BC%9A%E6%89%B9%E9%87%8F%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E8%BD%AC-WebP"><span class="toc-text">Demo 1：批量图片压缩转 WebP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo-2%EF%BC%9AHexo-Front-matter-%E6%89%B9%E9%87%8F%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">Demo 2：Hexo Front-matter 批量编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo-3%EF%BC%9A%E6%88%AA%E5%9B%BE-%E2%86%92-Markdown-%E4%B8%80%E9%94%AE%E5%BC%95%E7%94%A8"><span class="toc-text">Demo 3：截图 → Markdown 一键引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo-4%EF%BC%9A%E5%85%A8%E5%8A%9F%E8%83%BD%E7%95%AA%E8%8C%84%E9%92%9F%E7%BD%91%E9%A1%B5"><span class="toc-text">Demo 4：全功能番茄钟网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E7%AC%94%E6%8A%95%E8%B5%84%E5%9B%9E%E6%8A%A5%E7%8E%87%E6%9E%81%E9%AB%98"><span class="toc-text">四、为什么这笔投资回报率极高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E6%9C%AC%E8%BA%AB%E5%B0%B1%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84-Demo"><span class="toc-text">五、这篇文章本身就是最好的 Demo</span></a></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  
+
+  
+    
+<div class="giscus"></div>
+<script>
+  (function () {
+    var THEME_LIGHT = 'light';
+    var THEME_DARK  = 'dark';
+
+    // The site's authoritative theme lives on <html data-theme>; when absent,
+    // fall back to the OS preference (mirrors source/js/main.js).
+    function computeTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr === 'dark') return THEME_DARK;
+      if (attr === 'light') return THEME_LIGHT;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME_DARK : THEME_LIGHT;
+    }
+
+    // Inject the loader with the correct theme already set, so giscus renders in
+    // the right theme on first paint instead of flashing then re-skinning.
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('data-repo', 'lzldemo/lzldemo.github.io');
+    s.setAttribute('data-repo-id', 'R_kgDOQnQQ4A');
+    s.setAttribute('data-category', 'General');
+    s.setAttribute('data-category-id', 'DIC_kwDOQnQQ4M4DBBxh');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'bottom');
+    s.setAttribute('data-lang', 'zh-CN');
+    s.setAttribute('data-loading', 'lazy');
+    s.setAttribute('data-theme', computeTheme());
+    document.querySelector('.giscus').appendChild(s);
+
+    // giscus is a cross-origin iframe, so it can't read the host CSS. Push the
+    // theme to it via postMessage whenever the site theme changes.
+    function sendTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) return;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: computeTheme() } } },
+        'https://giscus.app'
+      );
+    }
+
+    // The theme-toggle button flips <html data-theme>; watch it directly so we
+    // stay decoupled from source/js/main.js.
+    new MutationObserver(sendTheme).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+    // Also follow the OS preference when the user hasn't manually chosen a theme.
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sendTheme);
+  })();
+</script>
+
+  
+
+  <footer class="post-footer">
+    
+      <div class="post-tags">
+        
+          <a href="/tags/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B9%98%E6%95%B0/">#生产力乘数</a>
+        
+          <a href="/tags/opencode/">#opencode</a>
+        
+      </div>
+    
+    <nav class="post-nav">
+      
+      
+        <a class="next" href="/2026/07/15/%E5%85%AD%E7%BB%B4%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/">六维希腊字母 &raquo;</a>
+      
+    </nav>
+  </footer>
+
+  
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      // Skip the TOC sidebar and nav so heading math copied into the TOC
+      // isn't typeset a second time.
+      ignoreHtmlClass: 'toc-sidebar|site-nav',
+      enableMenu: false
+    }
+  };
+</script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@4.1.2/tex-mml-chtml.js"
+        integrity="sha384-Nfw2UPOp2WaWfAjGXccSL8qKx4KWXN9NUonXtPcotBXKSqHMyNWrahYzDzIXhpTy"
+        crossorigin="anonymous"></script>
+
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 Zender</p>
+    
+    <p>Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &middot; Theme <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>
