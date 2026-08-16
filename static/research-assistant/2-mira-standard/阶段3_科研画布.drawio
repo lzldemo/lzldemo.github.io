@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="钙钛矿稳定性三区联动画布">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 标题 -->
+        <mxCell id="title" value="无限科研画布：钙钛矿稳定性策略三区联动" style="rounded=0;whiteSpace=wrap;html=1;fontSize=22;fontStyle=1;fillColor=#0f766e;strokeColor=#0b5b54;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="900" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 左区容器 -->
+        <mxCell id="zL" value="博士创新选题清单" style="swimlane;startSize=34;fillColor=#e6f4f1;strokeColor=#0f766e;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="400" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="选题1：明暗—温度—偏压耦合下卤素离子迁移的界面控制机制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f0ec;strokeColor=#0f766e;fontSize=12;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="45" width="370" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="选题2：可编程键合强度的双侧埋底界面分子" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f0ec;strokeColor=#0f766e;fontSize=12;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="110" width="370" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="选题3：Sn基无铅钙钛矿氧化—空位—自掺杂协同调控" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f0ec;strokeColor=#0f766e;fontSize=12;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="175" width="370" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="选题4：气相钝化—连续涂布—低温封装一体化（需中试）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9d9;strokeColor=#b45309;fontSize=12;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="240" width="370" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" value="选题5：第一性原理+物理机器学习驱动的界面失效预测" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="305" width="370" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="tnote" value="点击任意选题 → 自动联动调取文献/实验参数/逻辑链（交互版见 HTML）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#e8d9a8;fontSize=11;" vertex="1" parent="zL">
+          <mxGeometry x="15" y="520" width="370" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 中区容器 -->
+        <mxCell id="zM" value="五大稳定性路线对比 + 选题逻辑链" style="swimlane;startSize=34;fillColor=#eef1f0;strokeColor=#334155;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="470" y="110" width="620" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="rt_title" value="路线对比数据表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="45" width="590" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rt1" value="组分掺杂：多阳离子/混卤 | 成本低–中 | 规模化高 | 短板:组分窗口窄" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd9d6;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="80" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt2" value="界面钝化：脒基化/蒸汽TAM | 成本低–中 | 规模化中–高 | 短板:强键合插层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5f0ec;strokeColor=#0f766e;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="125" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt3" value="封装技术：低温无应变/气密 | 成本中–高 | 规模化高 | 短板:不解决本征迁移" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd9d6;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="170" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt4" value="维度调控：2D/准2D | 成本低–中 | 规模化中 | 短板:垂直输运损耗" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd9d6;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="215" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rt5" value="缺陷工程：FAI/PbI2、晶界交联 | 成本低–中 | 规模化中–高 | 短板:浅陷阱≠寿命" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cfd9d6;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="260" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="chain_title" value="选题逻辑链（示例：选题2 键合梯度）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="330" width="590" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="chain" value="分子结构 → 吸附能 → 质子转移能垒 → 界面降解 trade-off → 器件寿命" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8fa;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="370" width="590" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="chain_lit" value="支撑文献：Nature Energy 2024(键合-降解权衡) · Science 2024(脒基化) · JACS 2024(官能团转换)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#e8d9a8;fontSize=11;" vertex="1" parent="zM">
+          <mxGeometry x="15" y="435" width="590" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 右区容器 -->
+        <mxCell id="zR" value="优化后完整实验矩阵（双路线）" style="swimlane;startSize=34;fillColor=#f4f8f6;strokeColor=#0f766e;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="110" width="420" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="m_quick" value="路线A·快速小论文(3-6月)&#xa;变量:6浓度×2时间&#xa;数据:统计PCE+PL/TRPL+XRD&#xa;老化:1sun MPP 500h+热老化&#xa;期刊:ACS AMI/JPCL/SolarRRL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=left;verticalAlign=top;" vertex="1" parent="zR">
+          <mxGeometry x="15" y="45" width="390" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="m_top" value="路线B·冲击顶刊(12-24月)&#xa;变量:键合强度梯度(羧酸→膦酸→脒基)&#xa;机理:原位GIWAXS+运行中ToF-SIMS&#xa;老化:完整ISOS-L/D/T/LC矩阵+85°C&#xa;期刊:Nature Energy/Joule/Nat.Commun." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;align=left;verticalAlign=top;" vertex="1" parent="zR">
+          <mxGeometry x="15" y="170" width="390" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="m_isos" value="ISOS标准化老化参数&#xa;ISOS-L(光照) / ISOS-D(暗) / ISOS-T(热循环)&#xa;ISOS-LC(明暗) / ISOS-O(户外)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;verticalAlign=top;" vertex="1" parent="zR">
+          <mxGeometry x="15" y="300" width="390" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="m_fail" value="失效排查(6类)&#xa;PL强/FF降→减薄层 · 24h回落→换锚定基&#xa;杂相→换溶剂 · 双界面不升→查能级/阻抗" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;align=left;verticalAlign=top;" vertex="1" parent="zR">
+          <mxGeometry x="15" y="410" width="390" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="m_anno" value="批注区：可添加标记（交互版支持）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#e8d9a8;fontSize=11;dashed=1;" vertex="1" parent="zR">
+          <mxGeometry x="15" y="520" width="390" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
