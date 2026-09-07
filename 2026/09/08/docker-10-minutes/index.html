@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>Docker 10-Minute Quick Start Guide | 基础能力 × 生产力乘数</title>
+  <meta name="description" content="Docker 10-Minute Quick Start Guide A hands-on tutorial based on Ubuntu. Complete all 5 tasks in 10 minutes with copy-paste commands and explanations.   What is Docker?Docker is a containerization plat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker 10-Minute Quick Start Guide">
+<meta property="og:url" content="http://example.com/2026/09/08/docker-10-minutes/index.html">
+<meta property="og:site_name" content="基础能力 × 生产力乘数">
+<meta property="og:description" content="Docker 10-Minute Quick Start Guide A hands-on tutorial based on Ubuntu. Complete all 5 tasks in 10 minutes with copy-paste commands and explanations.   What is Docker?Docker is a containerization plat">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-07T16:11:40.000Z">
+<meta property="article:modified_time" content="2026-09-07T16:13:25.609Z">
+<meta property="article:author" content="Zender">
+<meta name="twitter:card" content="summary">
+  <link rel="icon" href="/images/logo.svg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-regular/result.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/lxgwwenkaigb-medium/result.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/giscus.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/css/math.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('warmpaper-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+  <div class="header-inner">
+    <a class="site-title" href="/"><img class="site-logo" src="/images/logo.svg" alt="Logo">基础能力 × 生产力乘数</a>
+    <button class="nav-toggle" aria-label="切换导航" aria-expanded="false">
+      <span class="nav-toggle-icon"></span>
+    </button>
+    <nav class="site-nav">
+      
+        
+        
+          <a class="nav-link" href="/">首页</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E9%97%AE%E9%A2%98%E6%97%A5%E5%BF%97/">问题日志</a>
+        
+      
+        
+        
+          <div class="nav-dropdown">
+            <a class="nav-link" href="/categories/Idea%E5%AD%B5%E5%8C%96%E5%99%A8/">Idea孵化器</a>
+            <ul class="sub-menu">
+              
+            </ul>
+          </div>
+        
+      
+        
+        
+          <a class="nav-link" href="/categories/%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7/">生产力工具</a>
+        
+      
+        
+        
+          <a class="nav-link" href="/%E5%85%B3%E4%BA%8E/">关于</a>
+        
+      
+      <a class="lang-switch" href="/en/">English</a>
+      <button class="theme-toggle" type="button" aria-label="切换主题" title="切换主题" data-theme-state="light">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <main class="main-content">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Docker 10-Minute Quick Start Guide</h1>
+    <div class="post-meta">
+      <time datetime="2026-09-07T16:11:40.000Z">2026-09-08</time>
+      
+    </div>
+  </header>
+
+  <div class="post-body-wrapper">
+    <div class="post-content">
+      <h1 id="Docker-10-Minute-Quick-Start-Guide"><a href="#Docker-10-Minute-Quick-Start-Guide" class="headerlink" title="Docker 10-Minute Quick Start Guide"></a>Docker 10-Minute Quick Start Guide</h1><blockquote>
+<p>A hands-on tutorial based on Ubuntu. Complete all 5 tasks in 10 minutes with copy-paste commands and explanations.</p>
+</blockquote>
+<hr>
+<h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Docker is a containerization platform that packages applications and their dependencies into isolated containers. It ensures consistent operation across any environment.</p>
+<p><strong>Core Concepts</strong>:</p>
+<ul>
+<li><strong>Image</strong>: A read-only template (like an “installer package”)</li>
+<li><strong>Container</strong>: A running instance of an image</li>
+<li><strong>Registry</strong>: Image repository (e.g., Docker Hub)</li>
+<li><strong>Volume</strong>: Persistent storage (data survives container deletion)</li>
+<li><strong>Network</strong>: Virtual switch for container-to-container communication</li>
+</ul>
+<hr>
+<h2 id="Task-1-Run-Your-First-Container"><a href="#Task-1-Run-Your-First-Container" class="headerlink" title="Task 1: Run Your First Container"></a>Task 1: Run Your First Container</h2><h3 id="1-1-Start-Nginx-and-Map-Ports"><a href="#1-1-Start-Nginx-and-Map-Ports" class="headerlink" title="1.1 Start Nginx and Map Ports"></a>1.1 Start Nginx and Map Ports</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name my-nginx -p 8080:80 nginx</span><br></pre></td></tr></table></figure>
+
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><code>-d</code>: Run in background (detach mode)</li>
+<li><code>--name</code>: Assign a name to the container</li>
+<li><code>-p host_port:container_port</code>: Port mapping</li>
+</ul>
+<p>Visit <code>http://your-vm-ip:8080</code> in your browser. You should see the Nginx welcome page.</p>
+<h3 id="1-2-Enter-the-Container"><a href="#1-2-Enter-the-Container" class="headerlink" title="1.2 Enter the Container"></a>1.2 Enter the Container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it my-nginx bash</span><br></pre></td></tr></table></figure>
+
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><code>exec</code>: Execute a command in a running container</li>
+<li><code>-it</code>: Interactive terminal (Interactive + TTY)</li>
+</ul>
+<p>Inside the container, run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;&lt;h1&gt;Hello Docker&lt;/h1&gt;&quot;</span> &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure>
+
+<p>Refresh your browser. The page content has changed.</p>
+<h3 id="1-3-Clean-Up"><a href="#1-3-Clean-Up" class="headerlink" title="1.3 Clean Up"></a>1.3 Clean Up</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop my-nginx</span><br><span class="line">docker <span class="built_in">rm</span> my-nginx</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Task-2-Build-Your-Own-Image-Dockerfile"><a href="#Task-2-Build-Your-Own-Image-Dockerfile" class="headerlink" title="Task 2: Build Your Own Image (Dockerfile)"></a>Task 2: Build Your Own Image (Dockerfile)</h2><h3 id="2-1-Create-a-Python-Script"><a href="#2-1-Create-a-Python-Script" class="headerlink" title="2.1 Create a Python Script"></a>2.1 Create a Python Script</h3><p>Create a directory <code>myapp/</code> and add <code>app.py</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Current time is: <span class="subst">&#123;time.ctime()&#125;</span>&quot;</span>, flush=<span class="literal">True</span>)</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-Write-a-Dockerfile"><a href="#2-2-Write-a-Dockerfile" class="headerlink" title="2.2 Write a Dockerfile"></a>2.2 Write a Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.9</span>-slim</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> app.py .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;python&quot;</span>, <span class="string">&quot;app.py&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Line-by-line breakdown</strong>:</p>
+<ul>
+<li><code>FROM</code>: Base image (lightweight Python)</li>
+<li><code>WORKDIR</code>: Set working directory (equivalent to <code>cd /app</code>)</li>
+<li><code>COPY</code>: Copy files from host to container</li>
+<li><code>CMD</code>: Command to run when the container starts</li>
+</ul>
+<h3 id="2-3-Build-and-Run"><a href="#2-3-Build-and-Run" class="headerlink" title="2.3 Build and Run"></a>2.3 Build and Run</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -t my-first-image .</span><br><span class="line">docker run my-first-image</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note</strong>: <code>flush=True</code> ensures log output appears immediately. Without it, <code>docker logs</code> may not show anything due to Python’s output buffering.</p>
+<hr>
+<h2 id="Task-3-Data-Persistence-Volumes"><a href="#Task-3-Data-Persistence-Volumes" class="headerlink" title="Task 3: Data Persistence (Volumes)"></a>Task 3: Data Persistence (Volumes)</h2><h3 id="3-1-Start-MySQL-with-a-Mounted-Directory"><a href="#3-1-Start-MySQL-with-a-Mounted-Directory" class="headerlink" title="3.1 Start MySQL with a Mounted Directory"></a>3.1 Start MySQL with a Mounted Directory</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/mysql_data</span><br><span class="line"></span><br><span class="line">docker run -d \</span><br><span class="line">  --name mysql-demo \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -v ~/mysql_data:/var/lib/mysql \</span><br><span class="line">  mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<p><strong>Key Parameters</strong>:</p>
+<ul>
+<li><code>-e</code>: Set environment variables (MySQL root password)</li>
+<li><code>-v</code>: Mount volume (host_directory:container_directory)</li>
+</ul>
+<h3 id="3-2-Test-Persistence"><a href="#3-2-Test-Persistence" class="headerlink" title="3.2 Test Persistence"></a>3.2 Test Persistence</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a test database</span></span><br><span class="line">docker <span class="built_in">exec</span> -it mysql-demo mysql -p</span><br><span class="line"><span class="comment"># Enter password 123456, then run:</span></span><br><span class="line">CREATE DATABASE test_db;</span><br><span class="line">EXIT;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Force delete the container</span></span><br><span class="line">docker <span class="built_in">rm</span> -f mysql-demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># Restart a new container with the same volume mount</span></span><br><span class="line">docker run -d \</span><br><span class="line">  --name mysql-demo \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -v ~/mysql_data:/var/lib/mysql \</span><br><span class="line">  mysql:5.7</span><br><span class="line"></span><br><span class="line"><span class="comment"># Verify data persists</span></span><br><span class="line">docker <span class="built_in">exec</span> -it mysql-demo mysql -p -e <span class="string">&quot;SHOW DATABASES;&quot;</span></span><br><span class="line"><span class="comment"># test_db should still exist</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Key Takeaway</strong>: Data lives in <code>~/mysql_data</code> on the host. It survives container deletion.</p>
+<hr>
+<h2 id="Task-4-Container-Networking"><a href="#Task-4-Container-Networking" class="headerlink" title="Task 4: Container Networking"></a>Task 4: Container Networking</h2><h3 id="4-1-Create-a-Custom-Network"><a href="#4-1-Create-a-Custom-Network" class="headerlink" title="4.1 Create a Custom Network"></a>4.1 Create a Custom Network</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create my-network</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-Start-MySQL-on-This-Network"><a href="#4-2-Start-MySQL-on-This-Network" class="headerlink" title="4.2 Start MySQL on This Network"></a>4.2 Start MySQL on This Network</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mysql-net \</span><br><span class="line">  --network my-network \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">  mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-Test-Connectivity-with-a-Temporary-Container"><a href="#4-3-Test-Connectivity-with-a-Temporary-Container" class="headerlink" title="4.3 Test Connectivity with a Temporary Container"></a>4.3 Test Connectivity with a Temporary Container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --<span class="built_in">rm</span> \</span><br><span class="line">  --network my-network \</span><br><span class="line">  python:3.9-slim bash</span><br></pre></td></tr></table></figure>
+
+<p>Inside the container:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Check DNS resolution (confirms container name resolves to IP)</span></span><br><span class="line">getent hosts mysql-net</span><br><span class="line"><span class="comment"># Output: 172.20.0.2  mysql-net</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test port connectivity</span></span><br><span class="line">python -c <span class="string">&quot;import socket; socket.create_connection((&#x27;mysql-net&#x27;, 3306), 3); print(&#x27;Port is open&#x27;)&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Key Concepts</strong>:</p>
+<ul>
+<li><code>--rm</code>: Auto-delete container after exit</li>
+<li><code>--network</code>: Attach container to a specific network</li>
+<li>Containers on the same network can reach each other via <strong>container name</strong> (built-in DNS)</li>
+</ul>
+<hr>
+<h2 id="Task-5-Docker-Compose-One-Command-Multi-Container-Setup"><a href="#Task-5-Docker-Compose-One-Command-Multi-Container-Setup" class="headerlink" title="Task 5: Docker Compose (One-Command Multi-Container Setup)"></a>Task 5: Docker Compose (One-Command Multi-Container Setup)</h2><h3 id="5-1-Create-docker-compose-yml"><a href="#5-1-Create-docker-compose-yml" class="headerlink" title="5.1 Create docker-compose.yml"></a>5.1 Create <code>docker-compose.yml</code></h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql:5.7</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db_data:/var/lib/mysql</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">rootpass</span></span><br><span class="line">      <span class="attr">MYSQL_DATABASE:</span> <span class="string">wordpress</span></span><br><span class="line">      <span class="attr">MYSQL_USER:</span> <span class="string">wpuser</span></span><br><span class="line">      <span class="attr">MYSQL_PASSWORD:</span> <span class="string">wppass</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">wordpress:</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">wordpress:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8000:80&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">WORDPRESS_DB_HOST:</span> <span class="string">db:3306</span></span><br><span class="line">      <span class="attr">WORDPRESS_DB_USER:</span> <span class="string">wpuser</span></span><br><span class="line">      <span class="attr">WORDPRESS_DB_PASSWORD:</span> <span class="string">wppass</span></span><br><span class="line">      <span class="attr">WORDPRESS_DB_NAME:</span> <span class="string">wordpress</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">wp_data:/var/www/html</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">db_data:</span></span><br><span class="line">  <span class="attr">wp_data:</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Structure Notes</strong>:</p>
+<ul>
+<li><code>services</code>: Define containers</li>
+<li><code>volumes</code> (top-level): Declare named volumes. Must be at the same level as <code>services</code>.</li>
+<li><code>depends_on</code>: Startup order dependency</li>
+</ul>
+<h3 id="5-2-Launch-Everything"><a href="#5-2-Launch-Everything" class="headerlink" title="5.2 Launch Everything"></a>5.2 Launch Everything</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Modern Docker (recommended)</span></span><br><span class="line">docker compose up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># Legacy Docker (with hyphen)</span></span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-Common-Compose-Commands"><a href="#5-3-Common-Compose-Commands" class="headerlink" title="5.3 Common Compose Commands"></a>5.3 Common Compose Commands</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker compose ps          <span class="comment"># Show container status</span></span><br><span class="line">docker compose logs        <span class="comment"># View all logs</span></span><br><span class="line">docker compose logs -f     <span class="comment"># Follow log output in real time</span></span><br><span class="line">docker compose down        <span class="comment"># Stop and remove containers (volumes persist)</span></span><br><span class="line">docker compose down -v     <span class="comment"># Stop and remove everything including volumes</span></span><br></pre></td></tr></table></figure>
+
+<p>Visit <code>http://your-vm-ip:8000</code>. You should see the WordPress installation wizard.</p>
+<hr>
+<h2 id="Command-Quick-Reference"><a href="#Command-Quick-Reference" class="headerlink" title="Command Quick Reference"></a>Command Quick Reference</h2><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>List running containers</td>
+<td><code>docker ps</code></td>
+</tr>
+<tr>
+<td>List all containers</td>
+<td><code>docker ps -a</code></td>
+</tr>
+<tr>
+<td>List images</td>
+<td><code>docker images</code></td>
+</tr>
+<tr>
+<td>Enter a container</td>
+<td><code>docker exec -it CONTAINER bash</code></td>
+</tr>
+<tr>
+<td>View container logs</td>
+<td><code>docker logs CONTAINER</code></td>
+</tr>
+<tr>
+<td>Build an image</td>
+<td><code>docker build -t IMAGE_NAME .</code></td>
+</tr>
+<tr>
+<td>Run a container</td>
+<td><code>docker run -d --name CONTAINER_NAME IMAGE</code></td>
+</tr>
+<tr>
+<td>Stop a container</td>
+<td><code>docker stop CONTAINER</code></td>
+</tr>
+<tr>
+<td>Remove a container</td>
+<td><code>docker rm CONTAINER</code></td>
+</tr>
+<tr>
+<td>Remove an image</td>
+<td><code>docker rmi IMAGE</code></td>
+</tr>
+<tr>
+<td>List networks</td>
+<td><code>docker network ls</code></td>
+</tr>
+<tr>
+<td>List volumes</td>
+<td><code>docker volume ls</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h2><table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ping: command not found</code></td>
+<td>Minimal images lack <code>ping</code>. Use <code>getent hosts CONTAINER_NAME</code> or Python socket test instead.</td>
+</tr>
+<tr>
+<td><code>docker logs</code> shows nothing</td>
+<td>Add <code>flush=True</code> in Python prints, or use <code>python -u</code> to launch.</td>
+</tr>
+<tr>
+<td><code>docker exec ... -p</code> fails</td>
+<td>The command is missing. Correct syntax: <code>docker exec mysql-demo mysql -p</code>.</td>
+</tr>
+<tr>
+<td>Port already in use</td>
+<td>Change port mapping: <code>-p 8081:80</code> instead of <code>-p 8080:80</code>.</td>
+</tr>
+<tr>
+<td>Slow image pulls</td>
+<td>Configure a registry mirror (e.g., Aliyun, USTC).</td>
+</tr>
+<tr>
+<td>Permission denied on volume</td>
+<td>For testing only: <code>sudo chmod -R 777 ~/mysql_data</code>.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="What’s-Next"><a href="#What’s-Next" class="headerlink" title="What’s Next?"></a>What’s Next?</h2><p>After completing these 5 tasks, you have mastered Docker fundamentals. Recommended next steps:</p>
+<ol>
+<li>Multi-stage builds (reduce image size)</li>
+<li>Health checks and restart policies</li>
+<li>Docker Swarm &#x2F; Kubernetes (orchestration)</li>
+<li>CI&#x2F;CD integration (GitLab CI &#x2F; GitHub Actions)</li>
+</ol>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Core Concept</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Task 1</td>
+<td><code>docker run</code>, <code>exec</code>, port mapping</td>
+</tr>
+<tr>
+<td>Task 2</td>
+<td>Dockerfile, image building</td>
+</tr>
+<tr>
+<td>Task 3</td>
+<td>Volume mounting, persistent storage</td>
+</tr>
+<tr>
+<td>Task 4</td>
+<td>Custom networks, container-to-container DNS</td>
+</tr>
+<tr>
+<td>Task 5</td>
+<td>Docker Compose orchestration</td>
+</tr>
+</tbody></table>
+<p><strong>Docker in one sentence</strong>:</p>
+<blockquote>
+<p>Image (installer) → Container (process) → Volume (hard disk) → Network (switch) → Compose (automation)</p>
+</blockquote>
+<p>Open your terminal and start with Task 1. Happy containerizing!</p>
+<hr>
+<blockquote>
+<p>All commands tested on Ubuntu 22.04 with Docker 24.0.</p>
+</blockquote>
+<pre><code>
+</code></pre>
+
+    </div>
+
+    
+        <aside class="toc-sidebar">
+  <div class="toc-wrapper">
+    <h3 class="toc-title">目录</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-Docker"><span class="toc-text">What is Docker?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-1-Run-Your-First-Container"><span class="toc-text">Task 1: Run Your First Container</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Start-Nginx-and-Map-Ports"><span class="toc-text">1.1 Start Nginx and Map Ports</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Enter-the-Container"><span class="toc-text">1.2 Enter the Container</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Clean-Up"><span class="toc-text">1.3 Clean Up</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-2-Build-Your-Own-Image-Dockerfile"><span class="toc-text">Task 2: Build Your Own Image (Dockerfile)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Create-a-Python-Script"><span class="toc-text">2.1 Create a Python Script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Write-a-Dockerfile"><span class="toc-text">2.2 Write a Dockerfile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Build-and-Run"><span class="toc-text">2.3 Build and Run</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-3-Data-Persistence-Volumes"><span class="toc-text">Task 3: Data Persistence (Volumes)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Start-MySQL-with-a-Mounted-Directory"><span class="toc-text">3.1 Start MySQL with a Mounted Directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Test-Persistence"><span class="toc-text">3.2 Test Persistence</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-4-Container-Networking"><span class="toc-text">Task 4: Container Networking</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Create-a-Custom-Network"><span class="toc-text">4.1 Create a Custom Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Start-MySQL-on-This-Network"><span class="toc-text">4.2 Start MySQL on This Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Test-Connectivity-with-a-Temporary-Container"><span class="toc-text">4.3 Test Connectivity with a Temporary Container</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-5-Docker-Compose-One-Command-Multi-Container-Setup"><span class="toc-text">Task 5: Docker Compose (One-Command Multi-Container Setup)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Create-docker-compose-yml"><span class="toc-text">5.1 Create docker-compose.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Launch-Everything"><span class="toc-text">5.2 Launch Everything</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-Common-Compose-Commands"><span class="toc-text">5.3 Common Compose Commands</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Command-Quick-Reference"><span class="toc-text">Command Quick Reference</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Troubleshooting"><span class="toc-text">Troubleshooting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What%E2%80%99s-Next"><span class="toc-text">What’s Next?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-text">Summary</span></a></li></ol>
+  </div>
+</aside>
+
+      
+  </div>
+
+  
+
+  
+    
+<div class="giscus"></div>
+<script>
+  (function () {
+    var THEME_LIGHT = 'light';
+    var THEME_DARK  = 'dark';
+
+    // The site's authoritative theme lives on <html data-theme>; when absent,
+    // fall back to the OS preference (mirrors source/js/main.js).
+    function computeTheme() {
+      var attr = document.documentElement.getAttribute('data-theme');
+      if (attr === 'dark') return THEME_DARK;
+      if (attr === 'light') return THEME_LIGHT;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME_DARK : THEME_LIGHT;
+    }
+
+    // Inject the loader with the correct theme already set, so giscus renders in
+    // the right theme on first paint instead of flashing then re-skinning.
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.setAttribute('data-repo', 'lzldemo/lzldemo.github.io');
+    s.setAttribute('data-repo-id', 'R_kgDOQnQQ4A');
+    s.setAttribute('data-category', 'General');
+    s.setAttribute('data-category-id', 'DIC_kwDOQnQQ4M4DBBxh');
+    s.setAttribute('data-mapping', 'pathname');
+    s.setAttribute('data-strict', '0');
+    s.setAttribute('data-reactions-enabled', '1');
+    s.setAttribute('data-emit-metadata', '0');
+    s.setAttribute('data-input-position', 'bottom');
+    s.setAttribute('data-lang', 'zh-CN');
+    s.setAttribute('data-loading', 'lazy');
+    s.setAttribute('data-theme', computeTheme());
+    document.querySelector('.giscus').appendChild(s);
+
+    // giscus is a cross-origin iframe, so it can't read the host CSS. Push the
+    // theme to it via postMessage whenever the site theme changes.
+    function sendTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) return;
+      frame.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: computeTheme() } } },
+        'https://giscus.app'
+      );
+    }
+
+    // The theme-toggle button flips <html data-theme>; watch it directly so we
+    // stay decoupled from source/js/main.js.
+    new MutationObserver(sendTheme).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
+    // Also follow the OS preference when the user hasn't manually chosen a theme.
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sendTheme);
+  })();
+</script>
+
+  
+
+  <footer class="post-footer">
+    
+    <nav class="post-nav">
+      
+      
+        <a class="next" href="/2026/08/16/methodology-for-exploring-unknown/">methodology for exploring unknown &raquo;</a>
+      
+    </nav>
+  </footer>
+
+  
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      // Skip the TOC sidebar and nav so heading math copied into the TOC
+      // isn't typeset a second time.
+      ignoreHtmlClass: 'toc-sidebar|site-nav',
+      enableMenu: false
+    }
+  };
+</script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@4.1.2/tex-mml-chtml.js"
+        integrity="sha384-Nfw2UPOp2WaWfAjGXccSL8qKx4KWXN9NUonXtPcotBXKSqHMyNWrahYzDzIXhpTy"
+        crossorigin="anonymous"></script>
+
+  
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    
+      <p>&copy; 2026 Zender</p>
+    
+    <p>由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动 · 主题 <a href="https://github.com/finch-xu/hexo-theme-warmpaper" target="_blank" rel="noopener">Warmpaper</a></p>
+  </div>
+</footer>
+
+  </div>
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>
